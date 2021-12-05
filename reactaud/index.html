@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Audio Editor</title>
+	
+	<link rel="stylesheet" type="text/css" href="all2.css">
+</head>
+<body>
+	<div id="app"></div>
+
+	<script src="all.build.js"></script>
+
+	<script>
+		var editor = AudioEditor.init ('app');
+
+		if ('serviceWorker' in navigator) {
+			try {
+				navigator.serviceWorker.register( 'sw.js' );
+			} catch ( error ) {}
+		}
+	</script>
+
+</body>
+</html>
